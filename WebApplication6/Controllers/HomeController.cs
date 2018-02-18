@@ -12,6 +12,11 @@ namespace WebApplication6.Controllers
 {
     public class HomeController : Controller
     {
+        [HttpGet]
+        public IActionResult Index()
+        {
+            return View();
+        }
         [HttpPost]
         public IActionResult SaveForm(string Age, string Name)
         {
@@ -20,10 +25,21 @@ namespace WebApplication6.Controllers
             ViewBag.Name = Name;
             return View("About");
         }
-        public IActionResult Index()
-        {
-            return View();
-        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         public IActionResult About()
         {
